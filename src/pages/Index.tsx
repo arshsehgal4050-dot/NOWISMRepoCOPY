@@ -1,4 +1,4 @@
-import nowismLogo from "@/assets/nowism-logo.jpg";
+import logo from "@/assets/logo.png";
 import { ArrowDown, Calendar, Clock, Mail, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,7 +8,7 @@ const Index = () => {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="text-lg font-light tracking-[0.3em] text-primary uppercase">Nowism</span>
+          <span className="text-lg tracking-[0.3em] text-primary uppercase font-bold">Exit escapism</span>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#offerings" className="hover:text-foreground transition-colors">Offerings</a>
@@ -28,12 +28,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
           <img
-            src={nowismLogo}
-            alt="NOWISM logo"
+            src={logo}
+            alt="Exit escapism logo"
             className="w-48 h-48 md:w-64 md:h-64 object-contain mb-12 rounded-full"
           />
-          <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] text-foreground mb-6 uppercase">
-            Nowism
+          <h1 className="text-5xl md:text-7xl tracking-[0.2em] text-foreground mb-6 uppercase font-bold font-sans">
+            Exit escapism
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mb-4">
             The art of being here. Fully. Completely.
