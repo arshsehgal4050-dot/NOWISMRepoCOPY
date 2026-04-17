@@ -41,8 +41,10 @@ const Index = () => {
           <p className="text-sm text-muted-foreground/70 font-light tracking-wide mb-12">
             Events · Courses · Transformation
           </p>
-          <a href="#about" className="animate-bounce text-muted-foreground hover:text-primary transition-colors">
-            <ArrowDown className="w-5 h-5" />
+          <a href="#about">
+            <Button variant="outline" className="tracking-[0.2em] text-xs border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+              EXIT ESCAPISM
+            </Button>
           </a>
         </div>
       </section>
