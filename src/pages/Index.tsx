@@ -54,7 +54,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4">Philosophy</p>
+              <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4">HOW</p>
               <h2 className="text-3xl md:text-4xl font-extralight mb-8 leading-tight">
                 Stop surviving.<br />
                 <span className="text-primary">Start living.</span>
