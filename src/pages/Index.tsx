@@ -4,18 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
+const PASSWORD = "EXITESCAPISM";
+
 const Index = () => {
   const [intention, setIntention] = useState("");
+  const [unlocked, setUnlocked] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleExitEscapism = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!intention.trim()) {
+    if (intention.trim().toUpperCase().replace(/\s+/g, "") !== PASSWORD) {
       e.preventDefault();
+      setError(true);
       return;
     }
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    setError(false);
+    setUnlocked(true);
+    setTimeout(() => {
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className={`min-h-screen bg-background text-foreground ${!unlocked ? "overflow-hidden h-screen" : ""}`}>
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
