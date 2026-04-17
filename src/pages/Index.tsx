@@ -32,8 +32,8 @@ const Index = () => {
             alt="NOWISM logo"
             className="w-48 h-48 md:w-64 md:h-64 object-contain mb-12 rounded-full"
           />
-          <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] text-foreground mb-6 uppercase">
-            Exit Escapism
+          <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] text-foreground mb-6 uppercase opacity-50">
+            Enter Nowism
           </h1>
           <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-xl mb-4 md:text-3xl">
             The art of being here. Fully. Completely.
