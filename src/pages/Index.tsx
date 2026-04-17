@@ -65,7 +65,10 @@ const Index = () => {
             <Input
               type="text"
               value={intention}
-              onChange={(e) => setIntention(e.target.value)}
+              onChange={(e) => {
+                setIntention(e.target.value);
+                if (error) setError(false);
+              }}
               placeholder="What are you here to do?"
               className="bg-card/50 border-primary/30 text-foreground placeholder:text-muted-foreground/60 text-sm tracking-wide focus-visible:ring-primary/50"
             />
@@ -78,8 +81,30 @@ const Index = () => {
               EXIT ESCAPISM
             </Button>
           </div>
+          {error && (
+            <p className="mt-4 text-xs tracking-[0.2em] text-destructive uppercase">
+              Not yet present. Try again.
+            </p>
+          )}
         </div>
+        {!unlocked && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0"
+            style={{ pointerEvents: "none" }}
+          />
+        )}
       </section>
+
+      {/* Locked overlay below hero — blocks all interaction until unlocked */}
+      {!unlocked && (
+        <div
+          aria-hidden="true"
+          onWheel={(e) => e.preventDefault()}
+          onTouchMove={(e) => e.preventDefault()}
+          className="fixed inset-0 z-40 pointer-events-none"
+        />
+      )}
 
       {/* About */}
       <section id="about" className="py-32 px-6">
