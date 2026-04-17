@@ -35,7 +35,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] text-foreground mb-6 uppercase">
             Exit Escapism
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mb-4">
+          <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-xl mb-4 md:text-3xl">
             The art of being here. Fully. Completely.
           </p>
           <p className="text-sm text-muted-foreground/70 font-light tracking-wide mb-12">
