@@ -1,4 +1,4 @@
-import nowismLogo from "@/assets/nowism-logo.jpg";
+import nowismLogo from "@/assets/nowism-logo.png";
 import { ArrowDown, Calendar, Clock, Mail, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -57,7 +57,7 @@ const Index = () => {
               type="text"
               value={intention}
               onChange={(e) => setIntention(e.target.value)}
-              placeholder="What are you escaping from?"
+              placeholder="What are you here to do?"
               className="bg-card/50 border-primary/30 text-foreground placeholder:text-muted-foreground/60 text-sm tracking-wide focus-visible:ring-primary/50"
             />
             <Button
