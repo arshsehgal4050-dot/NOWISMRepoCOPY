@@ -33,7 +33,7 @@ const Index = () => {
             className="w-48 h-48 md:w-64 md:h-64 object-contain mb-12 rounded-full"
           />
           <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] text-foreground mb-6 uppercase">
-            Nowism
+            Exit Escapism
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mb-4">
             The art of being here. Fully. Completely.
