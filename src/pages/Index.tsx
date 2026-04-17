@@ -1,8 +1,19 @@
 import nowismLogo from "@/assets/nowism-logo.jpg";
 import { ArrowDown, Calendar, Clock, Mail, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 const Index = () => {
+  const [intention, setIntention] = useState("");
+
+  const handleExitEscapism = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!intention.trim()) {
+      e.preventDefault();
+      return;
+    }
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
@@ -41,11 +52,23 @@ const Index = () => {
           <p className="text-sm text-muted-foreground/70 font-light tracking-wide mb-12">
             Events · Courses · Transformation
           </p>
-          <a href="#about">
-            <Button variant="outline" className="tracking-[0.2em] text-xs border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+          <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+            <Input
+              type="text"
+              value={intention}
+              onChange={(e) => setIntention(e.target.value)}
+              placeholder="What are you escaping from?"
+              className="bg-card/50 border-primary/30 text-foreground placeholder:text-muted-foreground/60 text-sm tracking-wide focus-visible:ring-primary/50"
+            />
+            <Button
+              onClick={handleExitEscapism}
+              disabled={!intention.trim()}
+              variant="outline"
+              className="tracking-[0.2em] text-xs border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+            >
               EXIT ESCAPISM
             </Button>
-          </a>
+          </div>
         </div>
       </section>
 
