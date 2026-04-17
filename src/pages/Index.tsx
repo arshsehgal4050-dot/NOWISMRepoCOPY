@@ -30,16 +30,44 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="text-lg font-light tracking-[0.3em] text-primary uppercase">Nowism</span>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#about" className="hover:text-foreground transition-colors">About</a>
-            <a href="#offerings" className="hover:text-foreground transition-colors">Offerings</a>
-            <a href="#events" className="hover:text-foreground transition-colors">Events</a>
-            <a href="#contact" className="hover:text-foreground transition-colors">Connect</a>
+            {[
+              { href: "#about", label: "About" },
+              { href: "#offerings", label: "Offerings" },
+              { href: "#events", label: "Events" },
+              { href: "#contact", label: "Connect" },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={unlocked ? link.href : undefined}
+                aria-disabled={!unlocked}
+                onClick={(e) => {
+                  if (!unlocked) e.preventDefault();
+                }}
+                className={`transition-colors ${
+                  unlocked
+                    ? "hover:text-foreground cursor-pointer"
+                    : "opacity-40 cursor-not-allowed pointer-events-none"
+                }`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
-          <a href="#offerings">
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs tracking-widest uppercase">
+          {unlocked ? (
+            <a href="#offerings">
+              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs tracking-widest uppercase">
+                Begin
+              </Button>
+            </a>
+          ) : (
+            <Button
+              size="sm"
+              disabled
+              className="bg-primary text-primary-foreground text-xs tracking-widest uppercase opacity-40 cursor-not-allowed"
+            >
               Begin
             </Button>
-          </a>
+          )}
         </div>
       </nav>
 
