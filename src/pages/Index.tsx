@@ -4,18 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
+const PASSWORD = "EXITESCAPISM";
+
 const Index = () => {
   const [intention, setIntention] = useState("");
+  const [unlocked, setUnlocked] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleExitEscapism = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!intention.trim()) {
+    if (intention.trim().toUpperCase().replace(/\s+/g, "") !== PASSWORD) {
       e.preventDefault();
+      setError(true);
       return;
     }
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    setError(false);
+    setUnlocked(true);
+    setTimeout(() => {
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className={`min-h-screen bg-background text-foreground ${!unlocked ? "overflow-hidden h-screen" : ""}`}>
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -56,7 +65,10 @@ const Index = () => {
             <Input
               type="text"
               value={intention}
-              onChange={(e) => setIntention(e.target.value)}
+              onChange={(e) => {
+                setIntention(e.target.value);
+                if (error) setError(false);
+              }}
               placeholder="What are you here to do?"
               className="bg-card/50 border-primary/30 text-foreground placeholder:text-muted-foreground/60 text-sm tracking-wide focus-visible:ring-primary/50"
             />
@@ -69,8 +81,30 @@ const Index = () => {
               EXIT ESCAPISM
             </Button>
           </div>
+          {error && (
+            <p className="mt-4 text-xs tracking-[0.2em] text-destructive uppercase">
+              Not yet present. Try again.
+            </p>
+          )}
         </div>
+        {!unlocked && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0"
+            style={{ pointerEvents: "none" }}
+          />
+        )}
       </section>
+
+      {/* Locked overlay below hero — blocks all interaction until unlocked */}
+      {!unlocked && (
+        <div
+          aria-hidden="true"
+          onWheel={(e) => e.preventDefault()}
+          onTouchMove={(e) => e.preventDefault()}
+          className="fixed inset-0 z-40 pointer-events-none"
+        />
+      )}
 
       {/* About */}
       <section id="about" className="py-32 px-6">
