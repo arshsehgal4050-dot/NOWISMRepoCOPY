@@ -1,12 +1,9 @@
 
-Add a fourth card to the Offerings section for "One-on-One Sessions".
+Reorder the Offerings cards in `src/pages/Index.tsx` to follow Personal → Collective:
 
-**Changes to `src/pages/Index.tsx`:**
-- Add a 4th item to the offerings array with:
-  - Icon: `User` (from lucide-react) — fits the personal/individual nature
-  - Title: "One-on-One Sessions"
-  - Description: Something like "Private guidance tailored to your journey — direct support to move from survival into presence."
-- Update the grid from `md:grid-cols-3` to `md:grid-cols-2 lg:grid-cols-4` so 4 cards lay out cleanly across breakpoints.
-- Add `User` to the lucide-react import.
+1. One-on-One Sessions
+2. Online Courses
+3. Live Events
+4. Immersive Retreats
 
-No other sections are affected.
+Only the order of items in the offerings array changes. No styling, layout, copy, or icons are modified.
