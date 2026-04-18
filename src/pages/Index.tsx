@@ -1,5 +1,5 @@
 import nowismLogo from "@/assets/nowism-logo.png";
-import { ArrowDown, Calendar, Clock, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, Calendar, Clock, Mail, MapPin, Sparkles, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -114,7 +114,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-extralight text-center mb-16">
             Paths to presence
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <Sparkles className="w-5 h-5" />,
@@ -130,6 +130,11 @@ const Index = () => {
                 icon: <Calendar className="w-5 h-5" />,
                 title: "Live Events",
                 desc: "Workshops and gatherings that create breakthroughs through shared energy and guided practice.",
+              },
+              {
+                icon: <User className="w-5 h-5" />,
+                title: "One-on-One Sessions",
+                desc: "Private guidance tailored to your journey — direct support to move from survival into presence.",
               },
             ].map((item, i) => (
               <div
