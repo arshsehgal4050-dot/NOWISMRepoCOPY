@@ -117,9 +117,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Sparkles className="w-5 h-5" />,
-                title: "Immersive Retreats",
-                desc: "Multi-day experiences designed to dissolve the noise and reconnect you with the present moment.",
+                icon: <User className="w-5 h-5" />,
+                title: "One-on-One Sessions",
+                desc: "Private guidance tailored to your journey — direct support to move from survival into presence.",
               },
               {
                 icon: <Clock className="w-5 h-5" />,
@@ -132,9 +132,9 @@ const Index = () => {
                 desc: "Workshops and gatherings that create breakthroughs through shared energy and guided practice.",
               },
               {
-                icon: <User className="w-5 h-5" />,
-                title: "One-on-One Sessions",
-                desc: "Private guidance tailored to your journey — direct support to move from survival into presence.",
+                icon: <Sparkles className="w-5 h-5" />,
+                title: "Immersive Retreats",
+                desc: "Multi-day experiences designed to dissolve the noise and reconnect you with the present moment.",
               },
             ].map((item, i) => (
               <div
