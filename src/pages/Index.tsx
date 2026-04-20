@@ -19,7 +19,7 @@ const Index = () => {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="text-lg font-light tracking-[0.3em] text-primary uppercase">Nowism</span>
+          <span className="text-lg tracking-[0.3em] text-primary uppercase font-semibold">Nowism</span>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#offerings" className="hover:text-foreground transition-colors">Offerings</a>
@@ -27,8 +27,8 @@ const Index = () => {
             <a href="#contact" className="hover:text-foreground transition-colors">Connect</a>
           </div>
           <a href="#offerings">
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs tracking-widest uppercase">
-              Begin
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs tracking-widest uppercase font-bold">
+              ENTER
             </Button>
           </a>
         </div>
@@ -43,11 +43,11 @@ const Index = () => {
             alt="NOWISM logo"
             className="w-48 h-48 md:w-64 md:h-64 object-contain mb-12 rounded-full"
           />
-          <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] text-foreground mb-6 uppercase">
+          <h1 className="text-5xl md:text-7xl tracking-[0.2em] text-foreground mb-6 uppercase font-semibold font-sans mx-0">
             Nowism
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mb-4">
-            The art of being here. Fully. Completely.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mb-4 font-extralight">
+            The art of total presence.
           </p>
           <p className="text-sm text-muted-foreground/70 font-light tracking-wide mb-12">
             Events · Courses · Transformation
@@ -77,18 +77,16 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4">HOW</p>
-              <h2 className="text-3xl md:text-4xl font-extralight mb-8 leading-tight">
-                Stop surviving.<br />
-                <span className="text-primary">Start living.</span>
+              <p className="tracking-[0.3em] text-primary uppercase mb-4 text-sm font-bold">HOW TO</p>
+              <h2 className="text-3xl md:text-4xl mb-8 leading-tight font-semibold">
+                ENTER<br />
+                <span className="text-primary">NOWISM</span>
               </h2>
-              <p className="text-muted-foreground font-light leading-relaxed mb-6">
-                Most people spend their lives trapped — replaying the past, rehearsing the future. 
-                Nowism is the radical commitment to the only moment that exists: this one.
+              <p className="text-muted-foreground leading-relaxed mb-6 font-semibold">
+                Nowism is not a destination; it’s a frequency. You tune into it by silencing the echoes. Close the door on the future, let the past dissolve, and let the present moment finally become enough.
               </p>
-              <p className="text-muted-foreground font-light leading-relaxed">
-                Through immersive events and transformative courses, we guide you from survival mode 
-                into presence — where clarity, peace, and power naturally arise.
+              <p className="text-muted-foreground leading-relaxed font-semibold">
+                At the heart of NOWISM are intimate one-on-one journeys. Alongside immersive events and courses, we guide you beyond survival and into the steady power of the present moment.
               </p>
             </div>
             <div className="relative">
@@ -110,30 +108,30 @@ const Index = () => {
       {/* Offerings */}
       <section id="offerings" className="py-32 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4 text-center">Offerings</p>
-          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-16">
-            Paths to presence
+          <p className="tracking-[0.3em] text-primary uppercase mb-4 text-center text-base font-semibold">Offerings</p>
+          <h2 className="text-3xl md:text-4xl text-center mb-16 font-normal">
+            Paths To Presence
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <User className="w-5 h-5" />,
-                title: "One-on-One Sessions",
+                title: "Solo Immersions",
                 desc: "Private guidance tailored to your journey — direct support to move from survival into presence.",
               },
               {
                 icon: <Clock className="w-5 h-5" />,
-                title: "Online Courses",
+                title: "Online Courses (Soon)",
                 desc: "Self-paced programs that weave presence practices into your daily life, wherever you are.",
               },
               {
                 icon: <Calendar className="w-5 h-5" />,
-                title: "Live Events",
+                title: "Live Events (Soon)",
                 desc: "Workshops and gatherings that create breakthroughs through shared energy and guided practice.",
               },
               {
                 icon: <Sparkles className="w-5 h-5" />,
-                title: "Immersive Retreats",
+                title: "Immersive Retreats (Soon)",
                 desc: "Multi-day experiences designed to dissolve the noise and reconnect you with the present moment.",
               },
             ].map((item, i) => (
@@ -156,23 +154,23 @@ const Index = () => {
           <p className="text-2xl md:text-3xl font-extralight leading-relaxed text-foreground/80 italic">
             "The present moment is the only moment available to us, and it is the door to all moments."
           </p>
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mt-8">Thich Nhat Hanh</p>
+          <p className="tracking-[0.3em] text-primary uppercase mt-8 font-semibold text-base">- Thich Nhat Hanh</p>
         </div>
       </section>
 
       {/* Events */}
       <section id="events" className="py-32 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4 text-center">Upcoming</p>
+          <p className="tracking-[0.3em] text-primary uppercase mb-4 text-center text-base font-semibold">COMING SOON</p>
           <h2 className="text-3xl md:text-4xl font-extralight text-center mb-16">
             Events & Experiences
           </h2>
           <div className="space-y-4">
             {[
-              { date: "Jun 21", title: "Summer Solstice Gathering", location: "Bali, Indonesia", type: "Retreat" },
-              { date: "Jul 12", title: "The Art of Stillness", location: "Online", type: "Course" },
-              { date: "Aug 3", title: "Urban Presence Workshop", location: "London, UK", type: "Workshop" },
-              { date: "Sep 15", title: "Silence & Surrender Retreat", location: "Sedona, AZ", type: "Retreat" },
+              { date: "N/A", title: "Summer Solstice Gathering", location: "N/A", type: "Retreat" },
+              { date: "N/A", title: "The Art of Stillness", location: "N/A", type: "COURSE" },
+              { date: "N/A", title: "Urban Presence Workshop", location: "N/A", type: "Workshop" },
+              { date: "N/A", title: "Silence & Surrender Retreat", location: "N/A", type: "Retreat" },
             ].map((event, i) => (
               <div
                 key={i}
@@ -196,13 +194,13 @@ const Index = () => {
       <section className="py-32 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
         <div className="max-w-2xl mx-auto text-center relative z-10">
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4">Your invitation</p>
-          <h2 className="text-3xl md:text-4xl font-extralight mb-6">
-            The moment is now
+          <p className="tracking-[0.3em] text-primary uppercase mb-4 text-base font-semibold">Your invitation</p>
+          <h2 className="text-3xl md:text-4xl mb-6 font-semibold">
+            The moment is NOW.
           </h2>
-          <p className="text-muted-foreground font-light mb-10 leading-relaxed">
-            Join thousands who have stepped out of autopilot and into the fullness of life. 
-            Your transformation begins with a single decision to be here.
+          <p className="text-muted-foreground mb-10 leading-relaxed text-xl font-normal whitespace-pre-line">
+            Step out of autopilot. Step into life.
+            It starts with one decision: be here now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 tracking-widest uppercase text-xs px-8 py-6">
@@ -239,7 +237,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-sm tracking-[0.3em] text-primary uppercase font-light">Nowism</span>
+          <span className="text-sm tracking-[0.3em] text-primary uppercase font-semibold">Nowism</span>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Nowism. All rights reserved.
           </p>
