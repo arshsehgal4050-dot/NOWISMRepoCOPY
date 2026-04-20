@@ -89,11 +89,11 @@ const Index = () => {
                 At the heart of NOWISM are intimate one-on-one journeys. Alongside immersive events and programs, we guide you beyond survival and into the steady power of the present moment.
               </p>
             </div>
-            <div className="relative">
-              <div className="aspect-square rounded-full border border-border flex items-center justify-center">
-                <div className="aspect-square w-3/4 rounded-full border border-primary/20 flex items-center justify-center">
-                  <div className="aspect-square w-3/4 rounded-full border border-primary/40 flex items-center justify-center">
-                    <div className="w-3 h-3 rounded-full bg-primary" />
+            <div className="relative group cursor-pointer">
+              <div className="aspect-square rounded-full border border-border flex items-center justify-center transition-all duration-700 group-hover:border-primary/50 group-hover:shadow-[0_0_60px_-15px_hsl(var(--primary)/0.3)]">
+                <div className="aspect-square w-3/4 rounded-full border border-primary/20 flex items-center justify-center transition-all duration-700 group-hover:border-primary/40 group-hover:scale-105">
+                  <div className="aspect-square w-3/4 rounded-full border border-primary/40 flex items-center justify-center transition-all duration-700 group-hover:border-primary/60 group-hover:scale-110">
+                    <div className="w-3 h-3 rounded-full bg-primary transition-all duration-700 group-hover:scale-150 group-hover:shadow-[0_0_20px_hsl(var(--primary))]" />
                   </div>
                 </div>
               </div>
