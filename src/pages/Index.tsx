@@ -46,11 +46,11 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl tracking-[0.2em] text-foreground mb-6 uppercase font-semibold font-sans mx-0">
             Nowism
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mb-4 font-extralight">
-            The art of total presence.
+          <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-4 font-extralight text-primary">
+            The Art Of Being In The Now.
           </p>
-          <p className="text-sm text-muted-foreground/70 font-light tracking-wide mb-12">
-            Events · Courses · Transformation
+          <p className="text-sm font-light tracking-wide mb-12 text-destructive-foreground">
+             Private Sessions · Inner Circle Events · Coherence Programs · Immersive Retreats
           </p>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
             <Input
@@ -64,7 +64,7 @@ const Index = () => {
               onClick={handleExitEscapism}
               disabled={!intention.trim()}
               variant="outline"
-              className="tracking-[0.2em] text-xs border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+              className="tracking-[0.2em] text-xs border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all disabled:opacity-40 disabled:cursor-not-allowed shrink-0 font-bold"
             >
               EXIT ESCAPISM
             </Button>
@@ -77,7 +77,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="tracking-[0.3em] text-primary uppercase mb-4 text-sm font-bold">HOW TO</p>
+              <p className="tracking-[0.3em] uppercase mb-4 text-sm font-bold text-destructive-foreground">here's how</p>
               <h2 className="text-3xl md:text-4xl mb-8 leading-tight font-semibold">
                 ENTER<br />
                 <span className="text-primary">NOWISM</span>
@@ -86,7 +86,7 @@ const Index = () => {
                 Nowism is not a destination; it’s a frequency. You tune into it by silencing the echoes. Close the door on the future, let the past dissolve, and let the present moment finally become enough.
               </p>
               <p className="text-muted-foreground leading-relaxed font-semibold">
-                At the heart of NOWISM are intimate one-on-one journeys. Alongside immersive events and courses, we guide you beyond survival and into the steady power of the present moment.
+                At the heart of NOWISM are intimate one-on-one journeys. Alongside immersive events and programs, we guide you beyond survival and into the steady power of the present moment.
               </p>
             </div>
             <div className="relative">
@@ -110,23 +110,23 @@ const Index = () => {
         <div className="max-w-5xl mx-auto">
           <p className="tracking-[0.3em] text-primary uppercase mb-4 text-center text-base font-semibold">Offerings</p>
           <h2 className="text-3xl md:text-4xl text-center mb-16 font-normal">
-            Paths To Presence
+            Paths To Your Better 'Now'
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <User className="w-5 h-5" />,
-                title: "Solo Immersions",
-                desc: "Private guidance tailored to your journey — direct support to move from survival into presence.",
+                title: "Identity Coaching (New)",
+                desc: "Private 1:1 guidance tailored to your journey. Real-time support to move you from survival to optimum human experience.",
               },
               {
                 icon: <Clock className="w-5 h-5" />,
-                title: "Online Courses (Soon)",
+                title: "Online Programs (Soon)",
                 desc: "Self-paced programs that weave presence practices into your daily life, wherever you are.",
               },
               {
                 icon: <Calendar className="w-5 h-5" />,
-                title: "Live Events (Soon)",
+                title: "Inner Circle  Events (Soon)",
                 desc: "Workshops and gatherings that create breakthroughs through shared energy and guided practice.",
               },
               {
@@ -137,7 +137,7 @@ const Index = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-card border border-border rounded-lg p-8 hover:border-primary/30 transition-all duration-500"
+                className="group border border-border rounded-lg p-8 hover:border-primary/30 transition-all duration-500 bg-zinc-900"
               >
                 <div className="text-primary mb-6">{item.icon}</div>
                 <h3 className="text-lg font-light mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
@@ -152,9 +152,9 @@ const Index = () => {
       <section className="py-24 px-6 bg-card border-y border-border">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-extralight leading-relaxed text-foreground/80 italic">
-            "The present moment is the only moment available to us, and it is the door to all moments."
+            "The moment I stopped escaping & started becoming, that 'moment' is now."
           </p>
-          <p className="tracking-[0.3em] text-primary uppercase mt-8 font-semibold text-base">- Thich Nhat Hanh</p>
+          <p className="tracking-[0.3em] text-primary uppercase mt-8 font-semibold text-base">- nowist</p>
         </div>
       </section>
 
@@ -216,8 +216,8 @@ const Index = () => {
       {/* Contact */}
       <section id="contact" className="py-32 px-6 border-t border-border">
         <div className="max-w-xl mx-auto text-center">
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-4">Connect</p>
-          <h2 className="text-3xl font-extralight mb-8">Stay present with us</h2>
+          <p className="tracking-[0.3em] text-primary uppercase mb-4 text-sm">Connect</p>
+          <h2 className="text-3xl font-extralight mb-8">With Your Higher Self Now</h2>
           <p className="text-muted-foreground font-light mb-10">
             Subscribe for mindful updates on upcoming events, courses, and reflections.
           </p>
