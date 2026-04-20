@@ -118,6 +118,7 @@ const Index = () => {
                 icon: <User className="w-5 h-5" />,
                 title: "Identity Coaching (New)",
                 desc: "Private 1:1 guidance tailored to your journey. Real-time support to move you from survival to optimum human experience.",
+                link: "https://tally.so/r/gDNN7l",
               },
               {
                 icon: <Clock className="w-5 h-5" />,
@@ -134,16 +135,26 @@ const Index = () => {
                 title: "Immersive Retreats (Soon)",
                 desc: "Multi-day experiences designed to dissolve the noise and reconnect you with the present moment.",
               },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group border border-border rounded-lg p-8 hover:border-primary/30 transition-all duration-500 bg-zinc-900"
-              >
-                <div className="text-primary mb-6">{item.icon}</div>
-                <h3 className="text-lg font-light mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            ].map((item, i) => {
+              const cardContent = (
+                <div
+                  key={i}
+                  className="group border border-border rounded-lg p-8 hover:border-primary/30 transition-all duration-500 bg-zinc-900 h-full"
+                >
+                  <div className="text-primary mb-6">{item.icon}</div>
+                  <h3 className="text-lg font-light mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{item.desc}</p>
+                </div>
+              );
+              
+              return item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+                  {cardContent}
+                </a>
+              ) : (
+                cardContent
+              );
+            })}
           </div>
         </div>
       </section>
