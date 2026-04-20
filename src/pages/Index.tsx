@@ -49,8 +49,8 @@ const Index = () => {
           <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-4 font-extralight text-primary">
             The Art Of Being In The Now.
           </p>
-          <p className="text-sm font-light tracking-wide mb-12 text-destructive-foreground">
-             Private Sessions · Inner Circle Events · Coherence Programs · Immersive Retreats
+          <p className="text-sm font-light tracking-wide mb-12 text-popover-foreground">
+            Private Sessions · Inner Circle Events · Coherence Programs · Immersive Retreats
           </p>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
             <Input
@@ -77,7 +77,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="tracking-[0.3em] uppercase mb-4 text-sm font-bold text-destructive-foreground">here's how</p>
+              <p className="tracking-[0.3em] uppercase mb-4 text-sm font-bold text-destructive-foreground">HERE'S HOW</p>
               <h2 className="text-3xl md:text-4xl mb-8 leading-tight font-semibold">
                 ENTER<br />
                 <span className="text-primary">NOWISM</span>
@@ -121,12 +121,12 @@ const Index = () => {
               },
               {
                 icon: <Clock className="w-5 h-5" />,
-                title: "Online Programs (Soon)",
+                title: "Coherence Programs (Soon)",
                 desc: "Self-paced programs that weave presence practices into your daily life, wherever you are.",
               },
               {
                 icon: <Calendar className="w-5 h-5" />,
-                title: "Inner Circle  Events (Soon)",
+                title: "Inner Circle Events (Soon)",
                 desc: "Workshops and gatherings that create breakthroughs through shared energy and guided practice.",
               },
               {
@@ -152,7 +152,7 @@ const Index = () => {
       <section className="py-24 px-6 bg-card border-y border-border">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-extralight leading-relaxed text-foreground/80 italic">
-            "The moment I stopped escaping & started becoming, that 'moment' is now."
+            "The moment I stopped escaping and started becoming, that 'moment' is now."
           </p>
           <p className="tracking-[0.3em] text-primary uppercase mt-8 font-semibold text-base">- nowist</p>
         </div>
