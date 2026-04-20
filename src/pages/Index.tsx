@@ -77,11 +77,11 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="tracking-[0.3em] uppercase mb-4 text-sm font-bold text-destructive-foreground">HERE'S HOW</p>
               <h2 className="text-3xl md:text-4xl mb-8 leading-tight font-semibold">
                 ENTER<br />
                 <span className="text-primary">NOWISM</span>
               </h2>
+              <p className="tracking-[0.3em] uppercase mb-4 text-sm font-bold text-destructive-foreground">HERE'S HOW</p>
               <p className="text-muted-foreground leading-relaxed mb-6 font-semibold">
                 Nowism is not a destination; it’s a frequency. You tune into it by silencing the echoes. Close the door on the future, let the past dissolve, and let the present moment finally become enough.
               </p>
