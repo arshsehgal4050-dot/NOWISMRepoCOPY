@@ -41,15 +41,15 @@ const Index = () => {
           <img
             src={nowismLogo}
             alt="NOWISM logo"
-            className="w-48 h-48 md:w-64 md:h-64 object-contain mb-12 rounded-full"
+            className="w-48 h-48 md:w-64 md:h-64 object-contain mb-8 rounded-full"
           />
-          <h1 className="text-5xl md:text-7xl tracking-[0.2em] text-foreground mb-6 uppercase font-semibold font-sans mx-0">
+          <h1 className="text-5xl md:text-7xl tracking-[0.2em] text-foreground mb-8 uppercase font-semibold font-sans mx-0">
             Nowism
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-4 font-extralight text-primary">
+          <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-8 font-extralight text-primary">
             The Art Of Being In The Now.
           </p>
-          <p className="text-sm font-light tracking-wide mb-12 text-popover-foreground">
+          <p className="text-sm font-light tracking-wide mb-8 text-popover-foreground">
             Private Sessions · Inner Circle Events · Coherence Programs · Immersive Retreats
           </p>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
